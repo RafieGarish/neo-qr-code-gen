@@ -1,0 +1,6 @@
+{
+  "name": "Neobrutalism QR Code Generator",
+  "description": "Generate stylish, high-contrast neobrutalist QR codes with vibrant palettes, custom modules, logos, sticker frames, and SVG/PNG exports.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
