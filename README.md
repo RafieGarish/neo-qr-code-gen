@@ -1,50 +1,64 @@
-<div align="center">
-  <a href="https://nextjs.org">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_dark_background.png">
-      <img alt="Next.js logo" src="https://assets.vercel.com/image/upload/v1662130559/nextjs/Icon_light_background.png" height="128">
-    </picture>
-  </a>
-  <h1>Next.js</h1>
+# Neobrutalism QR Code Generator
 
-<a href="https://vercel.com"><img alt="Vercel logo" src="https://img.shields.io/badge/MADE%20BY%20Vercel-000000.svg?style=for-the-badge&logo=Vercel&labelColor=000"></a>
-<a href="https://www.npmjs.com/package/next"><img alt="NPM version" src="https://img.shields.io/npm/v/next.svg?style=for-the-badge&labelColor=000000"></a>
-<a href="https://github.com/vercel/next.js/blob/canary/license.md"><img alt="License" src="https://img.shields.io/npm/l/next.svg?style=for-the-badge&labelColor=000000"></a>
-<a href="https://github.com/vercel/next.js/discussions"><img alt="Join the community on GitHub" src="https://img.shields.io/badge/Join%20the%20community-blueviolet.svg?style=for-the-badge&logo=Next.js&labelColor=000000&logoWidth=20"></a>
+A browser-based QR code studio for creating bold, customizable QR codes in a neobrutalist style. Enter a link, message, or other supported payload, customize the design, preview it live, then download or copy the result.
 
-</div>
+## Features
 
-## Getting Started
+- Generate QR codes for URLs, plain text, Wi-Fi access, vCards, email, SMS, and payment or crypto links.
+- Preview changes live as you edit the content and design.
+- Start from one of eight color presets, adjust colors, or generate a random style.
+- Customize QR modules, finder eyes, error correction, borders, shadows, badges, and frames.
+- Add an emoji or upload an image as a center badge.
+- Download PNG images at selectable 512, 1024, or 2048 pixel settings, with or without a frame.
+- Download a vector SVG, copy the QR image or payload, and save designs to a local history.
+- Keep QR generation in the browser. Saved designs are stored in the browser's `localStorage`.
 
-Used by some of the world's largest companies, Next.js enables you to create full-stack web applications by extending the latest React features, and integrating powerful Rust-based JavaScript tooling for the fastest builds.
+## Tech stack
 
-- Visit our [Learn Next.js](https://nextjs.org/learn) course to get started with Next.js.
-- Visit the [Next.js Showcase](https://nextjs.org/showcase) to see more sites built with Next.js.
+- [Next.js](https://nextjs.org/) 15 with the App Router
+- [React](https://react.dev/) 19 and [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/) 4
+- [`qrcode`](https://www.npmjs.com/package/qrcode) for QR matrix generation
+- [Lucide](https://lucide.dev/) icons
 
-## Documentation
+## Getting started
 
-Visit [https://nextjs.org/docs](https://nextjs.org/docs) to view the full documentation.
+### Requirements
 
-## Community
+- Node.js 20 or newer
+- npm
 
-The Next.js community can be found on [GitHub Discussions](https://github.com/vercel/next.js/discussions) where you can ask questions, voice ideas, and share your projects with other people.
+### Install and run
 
-To chat with other community members, you can join the Next.js [Discord](https://nextjs.org/discord) server.
+```bash
+git clone https://github.com/YOUR_USERNAME/neobrutalism-qr-code-generator.git
+cd neobrutalism-qr-code-generator
+npm install
+npm run dev
+```
 
-Do note that our [Code of Conduct](https://github.com/vercel/next.js/blob/canary/CODE_OF_CONDUCT.md) applies to all Next.js community channels. Users are **highly encouraged** to read and adhere to it to avoid repercussions.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-## Contributing
+No API key or environment variables are needed to run the app.
 
-Contributions to Next.js are welcome and highly appreciated. However, before you jump right into it, we would like you to review our [Contribution Guidelines](/contributing.md) to make sure you have a smooth experience contributing to Next.js.
+## Available scripts
 
-### Good First Issues:
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Start the local development server |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
+| `npm run clean` | Clean the Next.js build output |
 
-We have a list of **[good first issues](https://github.com/vercel/next.js/labels/good%20first%20issue)** that contain bugs that have a relatively limited scope. This is a great place for newcomers and beginners alike to get started, gain experience, and get familiar with our contribution process.
+## Export notes
 
----
+PNG export supports the selected frame and uploaded image badge. SVG export produces a vector QR code and supports the palette, module and eye styling, and emoji badge; it does not include frames or uploaded image badges.
 
-## Security
+## Privacy
 
-If you believe you have found a security vulnerability in Next.js, we encourage you to **_responsibly disclose this and NOT open a public issue_**.
+QR payloads are generated in the browser and are not sent to an application server. Saved history stays in that browser's local storage, so it is not synced across browsers or devices. Clearing browser storage removes the saved history.
 
-To participate in our Open Source Software Bug Bounty program, please visit [https://hackerone.com/vercel](https://hackerone.com/vercel).
+## License
+
+No license file is currently included. Add a `LICENSE` file before publishing if you want to grant others explicit permission to use, modify, and distribute this project.
